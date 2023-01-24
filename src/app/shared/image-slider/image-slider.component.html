@@ -1,0 +1,20 @@
+<div class="slider">
+  <div
+    class="slide"
+    *ngFor="let image of images; let i = index"
+    [ngClass]="{ active: i === currentIndex }"
+  >
+    <img [src]="image.src" [alt]="image.alt" />
+  </div>
+</div>
+<div class="indicators">
+  <span
+    *ngFor="let image of images; let i = index"
+    [ngClass]="{ active: i === currentIndex }"
+    (click)="changeSlide(i)"
+  ></span>
+</div>
+<div class="controls">
+  <button (click)="previous()">Previous</button>
+  <button (click)="next()">Next</button>
+</div>

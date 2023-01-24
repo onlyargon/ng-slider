@@ -1,0 +1,80 @@
+/* Add some general styles to the container */
+.slider {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Style the individual slides */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Add an active class to the currently displayed slide */
+.slide.active {
+  opacity: 1;
+}
+
+/* Style the image within the slide */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add some styles to the controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background: #3f51b5;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.controls button:hover {
+  background: #303f9f;
+}
+
+/* Style the indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+/* Style the individual indicators */
+.indicators span {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+/* Style the active indicator */
+.indicators span.active {
+  background: #3f51b5;
+}
